@@ -1,0 +1,9 @@
+**/.github/*
+**/node_modules/*
+**/out/*
+**/.next/*
+**/.nuxt/*
+**/*.yml
+**/*.md
+.prettierrc
+package.json
