@@ -1,19 +1,23 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from '@tailwindcss/vite';
+
 export default defineNuxtConfig({
-  compatibilityDate: '2024-04-03',
+  compatibilityDate: '2025-05-15',
   modules: [
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/google-fonts',
     '@nuxt/eslint',
+    '@nuxt/fonts',
     '@nuxt/icon',
+    '@nuxt/image',
+    '@nuxt/test-utils',
+    '@nuxt/scripts',
     '@pinia/nuxt',
-    '@pinia-plugin-persistedstate/nuxt',
-    'nuxt-snackbar',
-    'nuxt-lodash',
+    'pinia-plugin-persistedstate/nuxt',
   ],
+  vite: {
+    plugins: [tailwindcss()],
+  },
   devtools: { enabled: true, telemetry: false, timeline: { enabled: true } },
+  css: ['~/assets/css/main.css'],
   srcDir: 'src/',
-  css: ['~/assets/css/main.scss'],
   dir: {
     public: '../public',
   },
@@ -25,31 +29,22 @@ export default defineNuxtConfig({
   ],
   app: {
     head: {
-      title: 'Nuxt Project',
+      title: 'NuxtJS | Template',
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: '/favicon.ico',
+        },
+      ],
     },
   },
-  piniaPersistedstate: {
+  piniaPluginPersistedstate: {
     storage: 'localStorage',
   },
-  tailwindcss: {
-    viewer: {
-      exportViewer: false,
+  fonts: {
+    defaults: {
+      weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
     },
-  },
-  // googleFonts: {
-  // 	families: {
-  // 		'Fira Sans': [100, 200, 300, 400, 500, 600, 700, 800, 900],
-  // 	},
-  // },
-  snackbar: {
-    top: true,
-    right: true,
-    duration: 5000,
-    dense: true,
-    shadow: true,
-    border: 'bottom',
-  },
-  lodash: {
-    prefix: '_',
   },
 });

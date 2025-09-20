@@ -1,0 +1,20 @@
+name: Linter Check
+
+on: push
+
+jobs:
+    lint:
+        name: Linter Check
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Git Checkout
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+
+            - name: Installing packages
+              run: yarn
+
+            - name: Prettier/ESLint Check
+              run: yarn lint

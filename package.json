@@ -1,37 +1,45 @@
 {
   "name": "nuxt-app",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "scripts": {
+    "dev": "nuxt dev --host --dotenv .env.local",
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "start": "bun .output/server/index.mjs",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint .",
-    "fix": "prettier ./ --write && eslint . --fix"
+    "typecheck": "nuxt typecheck",
+    "lint": "prettier ./ --check && eslint . && nuxt typecheck",
+    "fix": "prettier ./ --write && eslint . --fix && nuxt typecheck"
   },
   "dependencies": {
-    "eslint": "^9.17.0",
-    "nuxt": "^3.15.1",
-    "pinia": "^2.3.0",
-    "vue": "latest"
+    "@nuxt/eslint": "1.9.0",
+    "@nuxt/fonts": "0.11.4",
+    "@nuxt/icon": "2.0.0",
+    "@nuxt/image": "1.11.0",
+    "@nuxt/scripts": "0.11.13",
+    "@nuxt/test-utils": "3.19.2",
+    "pinia-plugin-persistedstate": "^4.5.0",
+    "@pinia/nuxt": "^0.11.2",
+    "@tailwindcss/vite": "^4.1.13",
+    "@unhead/vue": "^2.0.17",
+    "lodash": "^4.17.21",
+    "nuxt": "^4.1.2",
+    "nuxt-toast": "^1.1.4",
+    "pinia": "^3.0.3",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss": "^4.1.13",
+    "vue": "^3.5.21",
+    "vue-router": "^4.5.1",
+    "zod": "^4.1.9"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^0.7.5",
-    "@nuxt/icon": "^1.10.3",
-    "@nuxtjs/google-fonts": "^3.2.0",
-    "@nuxtjs/tailwindcss": "^6.12.2",
-    "@pinia-plugin-persistedstate/nuxt": "^1.2.1",
-    "@pinia/nuxt": "^0.9.0",
     "@types/eslint-config-prettier": "^6.11.3",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "nuxt-lodash": "^2.5.3",
-    "nuxt-snackbar": "^1.2.0",
-    "prettier": "^3.4.2",
-    "sass": "^1.83.1",
-    "typescript": "^5.7.3"
+    "eslint": "^9.36.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.6.2"
   }
 }
