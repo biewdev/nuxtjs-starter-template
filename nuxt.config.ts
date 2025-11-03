@@ -17,9 +17,10 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true, telemetry: false, timeline: { enabled: true } },
   css: ['~/assets/css/main.css'],
-  srcDir: 'src/',
   dir: {
-    public: '../public',
+    app: 'app',
+    public: 'public',
+    middleware: 'middlewares',
   },
   components: [
     {
