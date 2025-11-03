@@ -14,7 +14,7 @@ jobs:
           fetch-depth: 0
 
       - name: Installing packages
-        run: bun
+        run: bun install --dev
 
       - name: Prettier/ESLint Check
         run: bun run lint
