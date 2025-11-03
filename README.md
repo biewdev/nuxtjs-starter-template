@@ -1,3 +1,36 @@
+# NuxtJS Template
+
+Project built with Nuxt.js that serves as the default template for initializing my new projects.
+
+## Dependencies
+
+| Package | Version |
+|----------|----------|
+| `@nuxt/fonts` | 0.11.4 |
+| `@nuxt/icon` | 2.1.0 |
+| `@nuxt/image` | 1.11.0 |
+| `@nuxt/scripts` | 0.13.0 |
+| `@nuxt/eslint` | 1.10.0 |
+| `@nuxt/test-utils` | 3.20.1 |
+| **`@pinia/nuxt`** | ^0.11.2 |
+| `@unhead/vue` | ^2.0.19 |
+| **`@tailwindcss/vite`** | ^4.1.16 |
+| `nuxt` | ^4.2.0 |
+| **`nuxt-toast`** | ^1.4.0 |
+| **`izitoast`** | ^1.4.0 |
+| `vue` | ^3.5.22 |
+| `vue-tsc` | ^3.1.3 |
+| `eslint` | ^9.39.0 |
+| `eslint-config-prettier` | ^10.1.8 |
+| `eslint-plugin-prettier` | ^5.5.4 |
+| `prettier` | ^3.6.2 |
+| **`pinia`** | ^3.0.3 |
+| **`pinia-plugin-persistedstate`** | ^4.7.1 |
+| **`tailwind-merge`** | ^3.3.1 |
+| **`zod`** | ^4.1.12 |
+| **`tailwindcss`** | ^4.1.16 |
+| **`lodash-es`** | ^4.17.21 |
+
 # Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
@@ -7,15 +40,6 @@ Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduct
 Make sure to install dependencies:
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
 # bun
 bun install
 ```
@@ -25,15 +49,6 @@ bun install
 Start the development server on `http://localhost:3000`:
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
 # bun
 bun run dev
 ```
@@ -43,15 +58,6 @@ bun run dev
 Build the application for production:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
 # bun
 bun run build
 ```
@@ -59,15 +65,6 @@ bun run build
 Locally preview production build:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
 # bun
 bun run preview
 ```

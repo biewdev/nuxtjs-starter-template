@@ -3,18 +3,23 @@ name: Linter Check
 on: push
 
 jobs:
-    lint:
-        name: Linter Check
-        runs-on: ubuntu-latest
+  lint:
+    name: Linter Check
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Git Checkout
-              uses: actions/checkout@v4
-              with:
-                  fetch-depth: 0
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-            - name: Installing packages
-              run: yarn
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          version: latest
 
-            - name: Prettier/ESLint Check
-              run: yarn lint
+      - name: Installing packages
+        run: bun install --dev
+
+      - name: Prettier/ESLint Check
+        run: bun run lint

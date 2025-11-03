@@ -1,6 +1,6 @@
 import { twMerge, type ClassNameValue } from 'tailwind-merge';
 import type { H3Event } from 'h3';
-import type { IFetchNativeResponseError, IFetchResponseError } from '~/server/types';
+import type { IFetchNativeResponseError, IFetchResponseError } from '~~/server/types';
 
 export const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
