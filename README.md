@@ -19,6 +19,7 @@ Project built with Nuxt.js that serves as the default template for initializing 
 | **`nuxt-toast`** | ^1.4.0 |
 | **`izitoast`** | ^1.4.0 |
 | `vue` | ^3.5.22 |
+| `vue-tsc` | ^3.1.3 |
 | `eslint` | ^9.39.0 |
 | `eslint-config-prettier` | ^10.1.8 |
 | `eslint-plugin-prettier` | ^5.5.4 |
