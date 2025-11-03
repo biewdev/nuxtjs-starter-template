@@ -13,6 +13,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup Bun
+        uses: oven-sh/bun@v1
+        with:
+          version: latest
+
       - name: Installing packages
         run: bun install --dev
 
